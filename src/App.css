@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Foldit:wght@100..900&");
+@import url("https://fonts.googleapis.com/css?family=Telex:regular");
 
 #root {
   max-width: 1280px;
@@ -41,7 +43,7 @@
   margin: auto;
   grid-area: "a a a";
   align-items: auto;
-  font-family: "Foldit", sans-serif;
+  font-family: "Anta", "Telex", "Foldit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
