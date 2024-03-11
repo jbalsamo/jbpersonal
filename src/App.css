@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anta&family=Foldit:wght@100..900&");
 @import url("https://fonts.googleapis.com/css?family=Telex:regular");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 
 #root {
+  --font-size-ht: 20px;
   max-width: 1280px;
   margin: auto;
   text-align: center;
@@ -16,6 +18,9 @@
   top: 0;
   left: 0;
   display: grid;
+  grid-template-columns: 20% 40% 40%;
+  grid-gap: 10px; /* Optional spacing between sections */
+  align-items: center; /* Aligns content vertically within sections */
   padding: 0.5em;
   text-align: start;
   background: linear-gradient(45deg, black, rgb(53, 49, 49), darkblue, blue);
@@ -39,16 +44,40 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
+.glitch-text {
+  color: white;
+  font-size: var(--font-size-ht);
+  text-shadow: -2px -2px #f00, /* red shadow offset left-top */ 2px 2px #0f0,
+    /* green shadow offset right-bottom */ -1px -1px #0af,
+    /* blue shadow offset left-top */ 1px 1px #0ff; /* yellow shadow offset right-bottom */
+  animation: glitch 1s linear infinite alternate;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px -2px #f00, 2px 2px #8f0, -1px -1px #00f, 1px 1px #0ff;
+  }
+  50% {
+    text-shadow: -4px 4px #8f0, 6px 6px #0ff, -2px -2px #00f, 2px 2px #f00;
+  }
+  100% {
+    text-shadow: -2px -2px #f00, 2px 2px #8f0, -1px -1px #0ff, 1px 1px #ff0;
+  }
+}
+
 .hero-text {
   margin: auto;
-  grid-area: "a a a";
-  align-items: auto;
-  font-family: "Anta", "Telex", "Foldit", sans-serif;
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+  grid-gap: 10px; /* Optional spacing between sections */
+  align-items: center; /* Aligns content vertically within sections */
+  font-family: "Tilt Neon", "Anta", "Telex", "Foldit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 2em;
+  font-size: var(--font-size-ht);
   text-shadow: darkgrey;
+  color: aqua;
 }
 
 .card {

@@ -10,8 +10,8 @@ function App() {
           <div class="grid-item">
             <img class="logo" src={logo} alt="Joe-Be-One" />
           </div>
-          <div class="grid-item hero-text">
-            <h1>The Joe Zone</h1>
+          <div class="grid-item hero-text glitch-text">
+            <h1>Data.stream/Joseph</h1>
           </div>
           <div> </div>
         </div>
